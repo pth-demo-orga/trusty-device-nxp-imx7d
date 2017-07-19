@@ -76,6 +76,7 @@ TRUSTY_PREBUILT_USER_TASKS :=
 
 # compiled from source
 TRUSTY_ALL_USER_TASKS := \
+	app/hwcrypto \
 	keymaster \
 	gatekeeper \
 	storage \
