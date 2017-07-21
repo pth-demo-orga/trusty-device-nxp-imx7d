@@ -13,8 +13,6 @@
 # limitations under the License.
 #
 
-export ARCH_arm_TOOLCHAIN_PREFIX=prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/arm-eabi/bin/
-
 KERNEL_32BIT := true
 
 MEMSIZE      ?= 0x2000000
