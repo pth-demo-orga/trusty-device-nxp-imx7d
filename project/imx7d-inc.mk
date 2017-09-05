@@ -51,6 +51,9 @@ GLOBAL_DEFINES += HEAP_GROW_SIZE=0x400000
 # limit physical memory to 38 bit to prevert tt_trampiline from getting larger than arm64_kernel_translation_table
 GLOBAL_DEFINES += MMU_IDENT_SIZE_SHIFT=38
 
+# Set max RPMB block to 256 means it will get 256*512=128KB space to store critical information.
+GLOBAL_DEFINES += APP_STORAGE_RPMB_BLOCK_COUNT=256
+
 GLOBAL_DEFINES += \
 	WITH_LIB_SM_MONITOR=1
 
@@ -78,6 +81,7 @@ TRUSTY_PREBUILT_USER_TASKS :=
 
 # compiled from source
 TRUSTY_ALL_USER_TASKS := \
+	app/avb \
 	app/hwcrypto \
 	keymaster \
 	gatekeeper \
