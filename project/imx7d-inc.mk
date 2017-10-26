@@ -19,16 +19,8 @@ DEBUG ?= 2
 SMP_MAX_CPUS ?= 2
 SMP_CPU_CLUSTER_SHIFT ?= 1
 
-TARGET := imx
-SOC_ARM_CPU := cortex-a7
-
 # select timer
-ifeq (true,$(call TOBOOL,$(KERNEL_32BIT)))
-# 32 bit Secure EL1 with a 64 bit EL3 gets the non-secure physical timer
 GLOBAL_DEFINES += TIMER_ARM_GENERIC_SELECTED=CNTP
-else
-GLOBAL_DEFINES += TIMER_ARM_GENERIC_SELECTED=CNTPS
-endif
 
 #
 # GLOBAL definitions
@@ -58,8 +50,6 @@ GLOBAL_DEFINES += \
 GLOBAL_DEFINES += \
 	WITH_LIB_VERSION=1
 
-GLOBAL_DEFINES += \
-	CONFIG_CONSOLE_TTY_BASE=$(CONFIG_CONSOLE_TTY_BASE)
 #
 # Modules to be compiled into lk.bin
 #

@@ -13,12 +13,6 @@
 # limitations under the License.
 #
 
-KERNEL_32BIT := true
-
-MEMSIZE      ?= 0x2000000
-KERNEL_BASE  := 0x9e000000
-
-CONFIG_CONSOLE_TTY_BASE := 0x30A70000
-PLATFORM_SOC := imx7d
+TARGET := imx7d/imx7d
 
 include project/imx7d-inc.mk
