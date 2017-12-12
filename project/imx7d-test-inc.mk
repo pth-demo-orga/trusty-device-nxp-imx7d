@@ -13,7 +13,8 @@
 # limitations under the License.
 #
 
-DEBUG := 1
-TARGET := imx7d/pico7d
-
 include project/imx7d-inc.mk
+
+TRUSTY_ALL_USER_TASKS += \
+	sample/ipc-unittest/main \
+	sample/ipc-unittest/srv \

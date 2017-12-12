@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-DEBUG := 1
+DEBUG := 2
 TARGET := imx7d/pico7d
 
 include project/imx7d-inc.mk

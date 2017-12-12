@@ -16,4 +16,4 @@
 DEBUG := 1
 TARGET := imx7d/pico7d
 
-include project/imx7d-inc.mk
+include project/imx7d-test-inc.mk
