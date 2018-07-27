@@ -55,9 +55,9 @@ GLOBAL_DEFINES += \
 # Modules to be compiled into lk.bin
 #
 MODULES += \
-	lib/sm \
-	lib/trusty \
-	lib/memlog \
+	trusty/kernel/lib/sm \
+	trusty/kernel/lib/trusty \
+	trusty/kernel/lib/memlog \
 
 TRUSTY_USER_ARCH := arm
 
@@ -70,11 +70,11 @@ TRUSTY_PREBUILT_USER_TASKS :=
 
 # compiled from source
 TRUSTY_ALL_USER_TASKS := \
-	app/avb \
-	app/hwcrypto \
-	keymaster \
-	gatekeeper \
-	storage \
+	trusty/user/app/avb \
+	trusty/hardware/nxp/app/hwcrypto \
+	trusty/user/app/keymaster \
+	trusty/user/app/gatekeeper \
+	trusty/user/app/storage \
 
 # This project requires trusty IPC
 WITH_TRUSTY_IPC := true
