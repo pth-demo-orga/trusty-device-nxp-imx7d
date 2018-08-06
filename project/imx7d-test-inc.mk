@@ -16,5 +16,5 @@
 include project/imx7d-inc.mk
 
 TRUSTY_ALL_USER_TASKS += \
-	sample/ipc-unittest/main \
-	sample/ipc-unittest/srv \
+	trusty/user/app/sample/ipc-unittest/main \
+	trusty/user/app/sample/ipc-unittest/srv \
